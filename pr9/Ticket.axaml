@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="450"
+        x:Class="pr9.Ticket"
+        Title="Виола">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical">
+               
+                <StackPanel Orientation="Horizontal">
+                        <Button Content="Вернуться" Click="Comeback" Width="100" Height="30" Margin="0 0 0 10"/>
+                        <TextBlock VerticalAlignment="Center">Поиск по Названию</TextBlock>
+                        <TextBox Name="txtSearch" Width="200" Margin="10 0 0 0" TextChanged="TxtSearch_OnTextChanged"></TextBox>
+                        <TextBlock VerticalAlignment="Center" x:Name="txtShow">Фильтрация по категории:</TextBlock>
+                        <ComboBox Name="Cmdstatus"
+                                  x:CompileBindings="False"
+                                  SelectionChanged="Cmdstatus_OnSelectionChanged">
+                                <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                                <TextBlock Text="{Binding Name}"></TextBlock>
+                                        </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        
+                </StackPanel>
+                <DataGrid Name="TicketsGrid" x:CompileBindings="False" Margin="0,0,0,50">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Категория" Binding="{Binding category_id}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Поставщик" Binding="{Binding provider_id}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Таблица поставщиков</TextBlock>
+                </StackPanel>
+                <DataGrid Name="ProviderGrid" x:CompileBindings="False">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Город" Binding="{Binding city}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Адрес" Binding="{Binding Adress}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"></DataGridTextColumn>
+                                
+                        </DataGrid.Columns>
+                </DataGrid>
+        </StackPanel></ScrollViewer>
+        <Window.Styles>
+                <Style Selector="Window">
+                        <Setter Property="Background">
+                                <Setter.Value>
+                                        <ImageBrush Source="D:/всякое/Полит/флеха/политех/Pr9/pr9/цветы.jpg" Stretch="UniformToFill" />
+                                </Setter.Value>
+                        </Setter>
+                </Style>
+        </Window.Styles>
+</Window>

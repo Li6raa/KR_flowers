@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="pr9.main_admin"
+        Title="main_admin">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Source="D:/всякое/Полит/флеха/политех/Pr9/pr9/цветы.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock VerticalAlignment="Center"></TextBlock>
+            <Button Content="Выйти" Click="OpenClientVersion" Width="70" Height="30" Margin="-20 0 0 0" Opacity="1"/>
+            <Button Content="Ассортимент" Click="OpenProductWindow" Width="120" Height="30" Margin="-10 80 0 10" Opacity="1"/>
+            <Button Content="Заказы" Click="OpenOrderWindow" Width="120" Height="30" Margin="-10 0 0 10" Opacity="1"/>
+            <Button Content="Выход" Click="exit" Width="100" Height="30" Margin="0 0 0 10" Opacity="1"/>
+        </StackPanel>
+    </Grid>
+</Window>

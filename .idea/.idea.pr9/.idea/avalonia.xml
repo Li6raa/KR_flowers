@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="pr9/Add.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/App.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/Authorization.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/MainWindow.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/Order1.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/ProductAdmin.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/Ticket.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/main(admin).axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/main_admin.axaml" value="pr9/pr9.csproj" />
+        <entry key="pr9/product.axaml" value="pr9/pr9.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
